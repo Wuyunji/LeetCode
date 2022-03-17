@@ -1,14 +1,16 @@
+/**
+ * @param {character[][]} board
+ * @param {string} word
+ * @return {boolean}
+ */
 var exist = function (board, word) {
-  let used = new Array(board.length).fill(0).map(() => new Array(board[0].length).fill(false))
-
+  let m = board.length
+  let n = board[0].length
+  let len = word.length
+  let used = new Array(m).fill(0).map(() => new Array(n).fill(false))
   function backtrace(i, j, index) {
-    if (index >= word.length) return true
-    if (
-      i < 0 ||
-      i >= board.length ||
-      j < 0 ||
-      j >= board[0].length
-    ) return false
+    if (index >= len) return true
+    if (i < 0 || j < 0 || i >= m || j >= n) return false
     if (used[i][j] || board[i][j] !== word[index]) return false
     used[i][j] = true
     if (
@@ -16,13 +18,13 @@ var exist = function (board, word) {
       backtrace(i + 1, j, index + 1) ||
       backtrace(i, j - 1, index + 1) ||
       backtrace(i - 1, j, index + 1)
-    ) return true
+    ) {
+      return true
+    }
     used[i][j] = false
-    return false
   }
-
-  for (let i = 0; i < board.length; i++) {
-    for (let j = 0; j < board[0].length; j++) {
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
       if (board[i][j] === word[0] && backtrace(i, j, 0)) {
         return true
       }
