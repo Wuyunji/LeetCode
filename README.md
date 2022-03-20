@@ -1,4 +1,4 @@
 # LeetCode
-LeetCode Shop
+This is a LeetCode Shop
 
-just some solution relevant to LeetCode
+Just some solution relevant to LeetCode listed here

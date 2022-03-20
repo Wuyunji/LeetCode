@@ -15,11 +15,10 @@ function TreeNode(val, left, right) {
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var zigzagLevelOrder = function (root) {
+var levelOrder = function (root) {
   if (root === null) return []
   let arr = []
   let queue = []
-  let flag = true
 
   queue.push(root)
   while (queue.length > 0) {
@@ -27,12 +26,11 @@ var zigzagLevelOrder = function (root) {
     let temp = []
     for (let i = 0; i < n; i++) {
       let node = queue.shift()
-      flag ? temp.push(node.val) : temp.unshift(node.val)
+      temp.push(node.val)
       if (node.left) queue.push(node.left)
       if (node.right) queue.push(node.right)
     }
     arr.push(temp)
-    flag = !flag
   }
 
   return arr
@@ -50,5 +48,5 @@ t2.right = t4
 t3.left = t5
 let root = t1
 
-let s = zigzagLevelOrder(root)
+let s = levelOrder(root)
 console.log(s);

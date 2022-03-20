@@ -3,10 +3,6 @@
  * @return {string[]}
  */
 var permutation = function (s) {
-   
-
-
-
   let set = new Set()
   let temp = []
   let used = []

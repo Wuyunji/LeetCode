@@ -18,17 +18,14 @@ function TreeNode(val, left, right) {
  */
 var hasPathSum = function (root, targetSum) {
   let flag = false
-  let sum = 0
-  function trace(root) {
-    if (flag) return
-    if (root === null) return
+  function trace(root, sum) {
+    if (flag || root === null) return
     sum += root.val
     if (root.left === null && root.right === null && sum === targetSum) flag = true
-    trace(root.left)
-    trace(root.right)
-    sum -= root.val
+    trace(root.left, sum)
+    trace(root.right, sum)
   }
-  trace(root)
+  trace(root, 0)
   return flag
 };
 

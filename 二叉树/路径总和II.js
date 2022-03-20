@@ -19,18 +19,18 @@ function TreeNode(val, left, right) {
 var pathSum = function (root, targetSum) {
   let arr = []
   let temp = []
-  let sum = 0
-  function trace(root) {
+  function traceback(root, sum) {
     if (root === null) return
     temp.push(root.val)
     sum += root.val
-    if (root.left === null && root.right === null && sum === targetSum) arr.push([...temp])
-    trace(root.left)
-    trace(root.right)
-    sum -= root.val
+    if (root.left === null && root.right === null && sum === targetSum) {
+      arr.push([...temp])
+    }
+    traceback(root.left, sum)
+    traceback(root.right, sum)
     temp.pop()
   }
-  trace(root)
+  traceback(root, 0)
   return arr
 };
 
