@@ -1,12 +1,8 @@
 Array.prototype.Flat = function (depth = 1) {
   if (depth <= 0) return this.slice()
   let arr = this.slice()
-  while (depth--) {
-    if (arr.some(x => Array.isArray(x))) {
-      arr = [].concat.apply([], arr)
-    } else {
-      break
-    }
+  while (arr.some(x => Array.isArray(x) && depth--)) {
+    arr = [].concat.apply([], arr)
   }
   return arr
 }
