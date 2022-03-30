@@ -3,7 +3,6 @@ Array.prototype.Reduce = function (fn, initValue) {
   for (let i = initValue ? 0 : 1; i < this.length; i++) {
     sum = fn(sum, this[i], i, this)
   }
-  console.log('sum', sum);
   return sum
 }
 let arr = [1, 2, 3]
