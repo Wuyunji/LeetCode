@@ -1,3 +1,4 @@
+// 二进制求和
 /**
  * @param {string} a
  * @param {string} b

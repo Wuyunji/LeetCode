@@ -1,3 +1,4 @@
+// 区间列表的交集
 /**
  * @param {number[][]} firstList
  * @param {number[][]} secondList

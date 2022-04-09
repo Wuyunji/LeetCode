@@ -1,3 +1,4 @@
+// 不同的二叉索引树的个数
 /**
  * @param {number} n
  * @return {number}

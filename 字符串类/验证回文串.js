@@ -1,3 +1,4 @@
+// 验证回文串
 /**
  * @param {string} s
  * @return {boolean}

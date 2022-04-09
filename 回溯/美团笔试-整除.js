@@ -1,3 +1,4 @@
+// 美团笔试-整除
 function zhengchu(n, k1, k2, arr) {
   let maxSum = -Infinity
   let count = 0

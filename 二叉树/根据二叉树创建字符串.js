@@ -1,3 +1,4 @@
+// 根据二叉树创建字符串
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

@@ -1,3 +1,4 @@
+// 汉明距离
 /**
  * @param {number} x
  * @param {number} y

@@ -1,3 +1,4 @@
+// 格雷编码
 /**
  * @param {number} n
  * @return {number[]}

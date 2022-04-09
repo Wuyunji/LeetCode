@@ -1,3 +1,4 @@
+// 统计元音字母序列的数目
 /**
  * @param {number} n
  * @return {number}

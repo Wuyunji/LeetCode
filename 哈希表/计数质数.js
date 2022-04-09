@@ -1,3 +1,4 @@
+// 计数质数
 /**
  * @param {number} n
  * @return {number}

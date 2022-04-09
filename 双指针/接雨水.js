@@ -1,3 +1,4 @@
+// 接雨水
 /**
  * @param {number[]} height
  * @return {number}

@@ -1,3 +1,4 @@
+// 美团笔试-神秘代码
 function shenmidaima(n, t, s) {
   if (t === 1) {
     let str = ''

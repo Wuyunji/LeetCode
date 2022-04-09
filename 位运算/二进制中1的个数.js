@@ -1,3 +1,4 @@
+// 二进制中1的个数
 /**
  * @param {number} n - a positive integer
  * @return {number}

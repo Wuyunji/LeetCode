@@ -1,3 +1,4 @@
+// 百度面试-获取最多的金币
 /**
  * k为初始位置（1-n)
  * 每次只能取相邻格子或当前位置的一枚金币，初始时不拿金币
@@ -13,7 +14,7 @@ function getMaxCoin(arr, k) {
   arr.push(0)
   function walk(k) {
     if (k < 1 || k > n) return 0
-    if (arr[k] <= 0 && arr[k] <= 0 && arr[k] <= 0) return 0
+    if (arr[k] <= 0) return 0
     arr[k]--
     let r1 = 1 + walk(k);
     let r2 = 1 + walk(k + 1);

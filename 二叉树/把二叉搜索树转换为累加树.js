@@ -1,3 +1,4 @@
+// 把二叉搜索树转换为累加树
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

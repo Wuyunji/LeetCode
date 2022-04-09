@@ -1,3 +1,4 @@
+// 删除链表的倒数第 n 个结点
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

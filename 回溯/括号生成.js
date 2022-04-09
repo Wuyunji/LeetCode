@@ -1,3 +1,4 @@
+// 括号生成
 /**
  * @param {number} n
  * @return {string[]}

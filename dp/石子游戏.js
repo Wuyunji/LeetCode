@@ -1,3 +1,4 @@
+// 石子游戏
 /**
  * @param {number[]} piles
  * @return {boolean}

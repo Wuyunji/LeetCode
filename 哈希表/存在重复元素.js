@@ -1,3 +1,4 @@
+// 存在重复元素
 /**
  * @param {number[]} nums
  * @return {boolean}

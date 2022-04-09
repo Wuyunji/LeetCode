@@ -1,3 +1,4 @@
+// 单词搜索
 /**
  * @param {character[][]} board
  * @param {string} word

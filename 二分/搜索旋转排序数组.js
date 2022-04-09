@@ -1,8 +1,9 @@
+// 搜索旋转排序数组
 /**
-     * @param {number[]} nums
-     * @param {number} target
-     * @return {number}
-     */
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
 var search = function (nums, target) {
   let i = 0
   let j = nums.length - 1

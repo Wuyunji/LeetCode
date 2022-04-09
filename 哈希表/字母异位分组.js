@@ -1,9 +1,8 @@
+// 字母异位分组
 /**
  * @param {string[]} strs
  * @return {string[][]}
  */
-
-
 var groupAnagrams = function (strs) {
   let map = new Map()
   for (let str of strs) {

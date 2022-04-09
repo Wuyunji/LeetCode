@@ -1,3 +1,4 @@
+// 二叉树的中序遍历
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -6,7 +7,6 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-
 function TreeNode(val, left, right) {
   this.val = (val === undefined ? 0 : val)
   this.left = (left === undefined ? null : left)

@@ -1,9 +1,10 @@
+// 查找和最小的 K 对数字
 /**
-    * @param {number[]} nums1
-    * @param {number[]} nums2
-    * @param {number} k
-    * @return {number[][]}
-    */
+  * @param {number[]} nums1
+  * @param {number[]} nums2
+  * @param {number} k
+  * @return {number[][]}
+  */
 var kSmallestPairs = function (nums1, nums2, k) {
   let m = nums1.length, n = nums2.length;
   // 记录每个位置的指针，索引从0开始

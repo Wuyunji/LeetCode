@@ -1,3 +1,4 @@
+// 最小栈
 var MinStack = function () {
   this.minStack = []
   this.min = Infinity
@@ -13,7 +14,6 @@ MinStack.prototype.push = function (val) {
   if (val < this.min) {
       this.min = val
   }
-
 };
 
 /**

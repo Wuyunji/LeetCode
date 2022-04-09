@@ -1,3 +1,4 @@
+// 验证栈序列
 /**
  * @param {number[]} pushed
  * @param {number[]} popped

@@ -1,3 +1,4 @@
+// Pow(x, n)
 /**
  * @param {number} x
  * @param {number} n

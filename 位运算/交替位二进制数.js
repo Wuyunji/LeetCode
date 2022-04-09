@@ -1,3 +1,4 @@
+// 交替位二进制数
 /**
  * @param {number} n
  * @return {boolean}

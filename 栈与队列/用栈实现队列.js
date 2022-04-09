@@ -1,3 +1,4 @@
+// 用栈实现队列
 var MyQueue = function () {
   this.inStack = []
   this.outStack = []

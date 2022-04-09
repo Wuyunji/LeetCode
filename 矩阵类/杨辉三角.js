@@ -1,3 +1,4 @@
+// 杨辉三角
 /**
  * @param {number} numRows
  * @return {number[][]}

@@ -1,3 +1,4 @@
+// 剪绳子
 /**
  * @param {number} n
  * @return {number}

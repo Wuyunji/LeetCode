@@ -1,4 +1,3 @@
-# LeetCode
-This is a LeetCode Shop
+﻿#
 
-Just some solution relevant to LeetCode listed here
+这里只是一些关于LeetCode题目的解决方法
