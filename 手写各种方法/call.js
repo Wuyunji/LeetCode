@@ -1,3 +1,4 @@
+// call
 Function.prototype.Call = function (context = window, ...args) {
   let fn = Symbol()
   context[fn] = this

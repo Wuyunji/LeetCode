@@ -1,3 +1,4 @@
+// promise A+
 class Promise {
   constructor(executor) {
     if (typeof executor !== 'function') {

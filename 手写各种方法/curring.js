@@ -1,3 +1,4 @@
+// 柯里化
 function Curring(fn, ...args1) {
   let args = [...args1]
   let context = this
@@ -10,6 +11,7 @@ function Curring(fn, ...args1) {
     }
   }
 }
+
 function add(...args) {
   return args.reduce((p, x) => p + x, 0)
 }

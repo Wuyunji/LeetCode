@@ -1,3 +1,4 @@
+// 深拷贝
 Object.prototype.DeepClone = function () {
   let target = Array.isArray(this) ? [] : {}
   if (this && typeof this === 'object') {
@@ -13,6 +14,7 @@ Object.prototype.DeepClone = function () {
   }
   return target
 }
+
 let obj = {
   a: 1,
   b: { name: 'wyj' },

@@ -1,3 +1,4 @@
+// 扁平化
 Array.prototype.Flat = function (depth = 1) {
   if (depth <= 0) return this.slice()
   let arr = this.slice()

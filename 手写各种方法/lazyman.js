@@ -1,3 +1,4 @@
+// lazyman
 class MyLazyMan {
   constructor(name) {
     console.log(name);

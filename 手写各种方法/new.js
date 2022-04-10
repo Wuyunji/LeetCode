@@ -1,3 +1,4 @@
+// new
 function New(constructor, ...args) {
   let _this = Object.create(constructor.prototype)
   let x = constructor.apply(_this, args)

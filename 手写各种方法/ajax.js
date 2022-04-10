@@ -1,3 +1,4 @@
+// ajax
 function Ajax(url, options = {
   method: 'GET',
   param:''

@@ -1,3 +1,4 @@
+// instanceof
 function Instanceof(obj, constructor) {
   if (typeof obj !== 'object') return false
   

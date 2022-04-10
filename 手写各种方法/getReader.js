@@ -1,3 +1,4 @@
+// getReader
 Array.prototype.getReader = function () {
   let index = 0
   let that = this

@@ -1,3 +1,4 @@
+// 防抖
 function Debounce(fn, delay) {
   let timer = null
   return function (...args) {

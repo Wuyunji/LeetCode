@@ -1,3 +1,4 @@
+// 快速排序
 function quickSort(arr) {
   function sort(left, right) {
     if (left > right) return

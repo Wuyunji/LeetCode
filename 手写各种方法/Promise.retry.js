@@ -1,3 +1,4 @@
+// promise.retry
 Promise.Retry = function (fn, times) {
   return new Promise(async (resolve, reject) => {
     while (times--) {

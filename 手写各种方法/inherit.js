@@ -1,3 +1,4 @@
+// 圣杯模式继承 寄生组合继承
 function inherit(target, origin){
   function F(){}
   F.prototype = origin.prototype

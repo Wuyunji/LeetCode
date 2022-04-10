@@ -1,3 +1,4 @@
+// promise.race
 Promise.Race = function (promises) {
   return new Promise((resolve, reject) => {
     promises.forEach(p => {

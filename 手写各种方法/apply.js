@@ -1,3 +1,4 @@
+// apply
 Function.prototype.Apply = function (context = window, args) {
   let fn = Symbol()
   context[fn] = this
@@ -5,6 +6,7 @@ Function.prototype.Apply = function (context = window, args) {
   delete context[fn]
   return ret
 }
+
 let a = 'global'
 let obj = {
   a: 'obj',

@@ -1,3 +1,4 @@
+// reduce
 Array.prototype.Reduce = function (fn, initValue) {
   let sum = initValue || this[0]
   for (let i = initValue ? 0 : 1; i < this.length; i++) {

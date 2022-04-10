@@ -1,3 +1,4 @@
+// promise.any
 Promise.Any = function (promises) {
   return new Promise((resolve, reject) => {
     let count = 0

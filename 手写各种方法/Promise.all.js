@@ -1,3 +1,4 @@
+// promise.all
 Promise.All = function (promises) {
   return new Promise((resolve, reject) => {
     let arr = []

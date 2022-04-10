@@ -1,3 +1,4 @@
+// bind
 Function.prototype.Bind = function (context = window, ...args1) {
   let fn = this
   return function F(...args2) {
@@ -7,6 +8,7 @@ Function.prototype.Bind = function (context = window, ...args1) {
     return fn.call(context, ...args1, ...args2)
   }
 }
+
 let a = 'global'
 let obj = {
   a: 'obj',

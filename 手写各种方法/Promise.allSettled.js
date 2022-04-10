@@ -1,3 +1,4 @@
+// promise.allSettled
 Promise.AllSettled = function (promises) {
   let arr = []
   let count = 0
