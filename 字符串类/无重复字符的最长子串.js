@@ -12,9 +12,7 @@ var lengthOfLongestSubstring = function (s) {
       j--
     } else {
       temp += s[j]
-      if (temp.length > max) {
-        max = temp.length
-      }
+      max = Math.max(temp.length, max)
     }
   }
   return max

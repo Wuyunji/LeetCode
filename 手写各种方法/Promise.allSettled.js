@@ -1,8 +1,8 @@
 // promise.allSettled
 Promise.AllSettled = function (promises) {
-  let arr = []
-  let count = 0
   return new Promise((resolve, reject) => {
+    let arr = []
+    let count = 0
     promises.forEach((p, index) => {
       Promise.resolve(p).then(value => {
         arr[index] = { status: 'fulfilled', value }

@@ -1,10 +1,10 @@
-//归并排序
+// 归并排序
 function mergeSort(arr) {
   if (arr.length === 1) return arr
   let mid = Math.floor(arr.length / 2)
   let left = arr.slice(0, mid)
   let right = arr.slice(mid)
-
+  
   function merge(left, right) {
     let result = []
     while (left.length > 0 && right.length > 0) {
@@ -16,6 +16,7 @@ function mergeSort(arr) {
     }
     return result.concat(left).concat(right)
   }
+
   return merge(mergeSort(left), mergeSort(right))
 }
 

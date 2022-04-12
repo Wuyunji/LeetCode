@@ -1,4 +1,31 @@
-// 深拷贝
+// 深拷贝1
+function DeepClone(obj){
+	if(typeof obj !== 'object' || obj === null)  return obj
+  let target = Array.isArray(obj) ? [] : {}
+	for(let key in obj){
+		if(obj.hasOwnProperty(key)){
+			target[key] = DeepClone(obj[key])
+		}
+	}
+	return target
+}
+// 深拷贝2
+function DeepClone(obj) {
+  let target = Array.isArray(obj) ? [] : {}
+  if (obj && typeof obj === 'object') {
+    for (let prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        if (obj[prop] && typeof obj[prop] === 'object') {
+          target[prop] = DeepClone(obj[prop])
+        } else {
+          target[prop] = obj[prop]
+        }
+      }
+    }
+  }
+  return target
+}
+// 深拷贝3
 Object.prototype.DeepClone = function () {
   let target = Array.isArray(this) ? [] : {}
   if (this && typeof this === 'object') {
@@ -14,6 +41,18 @@ Object.prototype.DeepClone = function () {
   }
   return target
 }
+
+function deepClone(obj){
+	if(typeof obj !== 'object' || obj == null)  return obj
+  let target = Array.isArray(obj) ? [] : {}
+	for(let key in obj){
+		if(obj.hasOwnProperty(key)){
+			target[key] = deepClone(obj[key])
+		}
+	}
+	return target
+}
+
 
 let obj = {
   a: 1,
