@@ -6,6 +6,7 @@ Array.prototype.Reduce = function (fn, initValue) {
   }
   return sum
 }
+
 let arr = [1, 2, 3]
 let sum = arr.Reduce((pre, now) => {
   return pre + now

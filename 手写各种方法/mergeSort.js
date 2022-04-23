@@ -4,7 +4,7 @@ function mergeSort(arr) {
   let mid = Math.floor(arr.length / 2)
   let left = arr.slice(0, mid)
   let right = arr.slice(mid)
-  
+
   function merge(left, right) {
     let result = []
     while (left.length > 0 && right.length > 0) {

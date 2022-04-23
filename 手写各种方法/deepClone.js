@@ -1,22 +1,28 @@
-// 深拷贝1
-function DeepClone(obj){
-	if(typeof obj !== 'object' || obj === null)  return obj
+// 深拷贝1 (面试高分版)
+function DeepClone(obj, hash = new WeakMap()) {
+  if (obj === null || obj === undefined) return obj
+  if (obj instanceof Date) return new Date(obj)
+  if (obj instanceof RegExp) return new RegExp(obj)
+  if (typeof obj !== "object") return obj
+  if (hash.has(obj)) return hash.get(obj)
+
   let target = Array.isArray(obj) ? [] : {}
-	for(let key in obj){
-		if(obj.hasOwnProperty(key)){
-			target[key] = DeepClone(obj[key])
-		}
-	}
-	return target
+  hash.set(obj, target)
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      target[key] = DeepClone(obj[key], hash)
+    }
+  }
+  return target
 }
-// 深拷贝2
-function DeepClone(obj) {
+// 深拷贝2 (简易版)
+function DeepClone2(obj) {
   let target = Array.isArray(obj) ? [] : {}
   if (obj && typeof obj === 'object') {
     for (let prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         if (obj[prop] && typeof obj[prop] === 'object') {
-          target[prop] = DeepClone(obj[prop])
+          target[prop] = DeepClone2(obj[prop])
         } else {
           target[prop] = obj[prop]
         }
@@ -25,44 +31,33 @@ function DeepClone(obj) {
   }
   return target
 }
-// 深拷贝3
-Object.prototype.DeepClone = function () {
-  let target = Array.isArray(this) ? [] : {}
-  if (this && typeof this === 'object') {
-    for (let prop in this) {
-      if (this.hasOwnProperty(prop)) {
-        if (this[prop] && typeof this[prop] === 'object') {
-          target[prop] = this[prop].DeepClone()
-        } else {
-          target[prop] = this[prop]
-        }
-      }
-    }
-  }
-  return target
-}
-
-function deepClone(obj){
-	if(typeof obj !== 'object' || obj == null)  return obj
-  let target = Array.isArray(obj) ? [] : {}
-	for(let key in obj){
-		if(obj.hasOwnProperty(key)){
-			target[key] = deepClone(obj[key])
-		}
-	}
-	return target
-}
-
 
 let obj = {
-  a: 1,
-  b: { name: 'wyj' },
-  c: [2, 3, { d: '123' }]
+  a: 9999,
+  b: 'string',
+  c: false,
+  d: null,
+  e: undefined,
+  f: true,
+  g: { name: 'xiaoming' },
+  h: [1, 2, 3],
+  i: new Date(),
+  g: new RegExp(/^abcd$/),
+  k: function F() { return 1 },
+  l: Symbol(),
+  m: BigInt(777),
+  n: [{ name: 'aaa' }, { name: 'bbb' }]
 }
-let obj2 = obj.DeepClone()
+
+let cloneObj = DeepClone(obj)
 console.log(obj);
+console.log(cloneObj);
+
+let obj2 = {}
+let obj3 = {}
+obj2.a = obj3
+obj3.b = obj2
+
+let cloneObj2 = DeepClone(obj2)
 console.log(obj2);
-obj2.b.play = [3, 4, 5]
-obj2.c[2] = { d: '2' }
-console.log(obj);
-console.log(obj2);
+console.log(cloneObj2);

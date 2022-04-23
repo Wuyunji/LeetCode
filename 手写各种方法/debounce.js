@@ -3,13 +3,17 @@ function Debounce(fn, delay) {
   let timer = null
   return function (...args) {
     let context = this
-    if (timer) clearTimeout(timer)
+    if (timer) {
+      clearTimeout(timer)
+      timer = null
+    }
     timer = setTimeout(() => {
       fn.apply(context, args)
     }, delay);
   }
 }
-function handleClick(e){
+
+function handleClick(e) {
   console.log('click');
   console.log(this);
   console.log(e);

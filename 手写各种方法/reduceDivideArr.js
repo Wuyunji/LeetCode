@@ -23,6 +23,6 @@ function reduceDivideArr(arr) {
   return ans
 }
 
-let arr = [1, 2, 3, 6, 8, 9, 11]
+let arr = [1, 2, 3, 6, 8, 9, 11] //  -->  [ '1-3', '6', '8-9', '11' ]
 let s = reduceDivideArr(arr)
 console.log(s);

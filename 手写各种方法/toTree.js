@@ -4,7 +4,6 @@ function toTree(node) {
   node.forEach(function (it) {
     map.set(it.id, it)
   })
-
   let ans = []
   node.forEach(function (it) {
     let parent = map.get(it.pid)
@@ -16,7 +15,6 @@ function toTree(node) {
       ans.push(it)
     }
   })
-
   return JSON.stringify(ans);
 }
 

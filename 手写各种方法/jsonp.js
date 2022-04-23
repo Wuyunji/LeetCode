@@ -6,13 +6,11 @@ function jsonp1(url, data, callbackName) {
     for (let key in data) {
       params += `${key}=${encodeURIComponent(data[key])}&`;
     }
-
     // 向body插入一个script标签
     let script = document.createElement('script')
     script.type = 'text/javascript'
     script.src = `${url}?${params}${callbackName}=fn`
     document.body.appendChild(script)
-
     // 定义全局函数 前端自定义的
     window['fn'] = function (res) {
       resolve(res)
@@ -27,14 +25,12 @@ function jsonp2(url, data, callbackName, callback) {
   for (let key in data) {
     params += `${key}=${encodeURIComponent(data[key])}&`;
   }
-
   // 向body插入一个script标签
   let script = document.createElement('script')
   script.type = 'text/javascript'
   script.src = `${url}?${params}${callbackName}=fn`
   script.addEventListener('load', callback)
   document.body.appendChild(script)
-
   // 定义全局函数 前端自定义的
   window['fn'] = function (res) {
     console.log(res);

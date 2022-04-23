@@ -2,7 +2,6 @@
 function limitLoad(urls, imgLoad, limit) {
   let A = urls.slice(0, limit)
   let B = urls.slice(limit, urls.length)
-
   let promises = A.map((url, index) => {
     return imgLoad(url)
       .then((img) => {
@@ -10,7 +9,6 @@ function limitLoad(urls, imgLoad, limit) {
         return index
       })
   })
-
   return B.reduce((p, url) => {
     return p.then(() => {
       return Promise.race(promises)

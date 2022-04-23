@@ -3,7 +3,7 @@ function Trottle(fn, delay) {
   let timer = null
   return function (...args) {
     let context = this
-    if (!timer){
+    if (!timer) {
       timer = setTimeout(() => {
         fn.apply(context, args)
         clearTimeout(timer)
@@ -12,7 +12,8 @@ function Trottle(fn, delay) {
     }
   }
 }
-function handleClick(e){
+
+function handleClick(e) {
   console.log('click');
   console.log(this);
   console.log(e);

@@ -4,6 +4,7 @@ function New(constructor, ...args) {
   let x = constructor.apply(_this, args)
   return typeof x === 'object' ? x : _this
 }
+
 function Person(name, age) {
   this.name = name
   this.age = age

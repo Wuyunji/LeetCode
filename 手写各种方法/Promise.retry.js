@@ -1,5 +1,22 @@
 // promise.retry 1
 Promise.Retry = function (fn, times) {
+  return new Promise((resolve, reject) => {
+    function _try() {
+      fn()
+        .then(res => resolve(res))
+        .catch(e => {
+          if (--times === 0) {
+            reject('全部失败')
+          } else {
+            _try()
+          }
+        })
+    }
+    _try()
+  })
+}
+// promise.retry 2
+Promise.Retry = function (fn, times) {
   return new Promise(async (resolve, reject) => {
     while (times--) {
       try {
@@ -14,24 +31,6 @@ Promise.Retry = function (fn, times) {
     }
   }).catch(e => {
     throw new Error('全部执行失败')
-  })
-}
-
-// promise.retry 2
-Promise.Retry = function (fn, times) {
-  return new Promise((resolve, reject) => {
-    function _try() {
-      fn()
-        .then(res => resolve(res))
-        .catch(e => {
-          if (--times === 0) {
-            reject('全部失败')
-          } else {
-            _try()
-          }
-        })
-    }
-    _try()
   })
 }
 

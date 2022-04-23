@@ -1,7 +1,6 @@
 // instanceof
 function Instanceof(obj, constructor) {
   if (typeof obj !== 'object') return false
-  
   let prototype = constructor.prototype
   let proto = Object.getPrototypeOf(obj)
   while (proto) {
@@ -10,6 +9,7 @@ function Instanceof(obj, constructor) {
   }
   return false
 }
+
 console.log(Instanceof({}, Object));
 console.log(Instanceof([], Array));
 console.log(Instanceof([], Object));

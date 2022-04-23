@@ -1,10 +1,10 @@
 // getParams
-function getParams(url){
+function getParams(url) {
   let obj = {}
   let str = decodeURIComponent(url)
   let s1 = str.split(/\?|\#/)
   let s2 = s1[1].split('&')
-  for(let s of s2){
+  for (let s of s2) {
     let key = s.split('=')[0]
     let value = s.split('=')[1]
     obj[key] = value
