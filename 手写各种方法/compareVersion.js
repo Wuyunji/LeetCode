@@ -10,14 +10,8 @@ function compareVersion(v1, v2) {
     arr2.push('0')
   }
   for (let i = 0; i < len; i++) {
-    let num1 = parseInt(arr1[i])
-    let num2 = parseInt(arr2[i])
-
-    if (num1 > num2) {
-      return 1
-    } else if (num1 < num2) {
-      return -1
-    }
+    if (parseInt(arr1[i]) > parseInt(arr2[i])) return 1
+    if (parseInt(arr1[i]) < parseInt(arr2[i])) return -1
   }
   return 0
 }
