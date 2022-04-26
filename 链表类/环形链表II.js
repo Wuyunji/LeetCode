@@ -34,6 +34,7 @@ var detectCycle = function (head) {
   }
   return fast
 };
+
 let p1 = new ListNode(1)
 let p2 = new ListNode(2)
 let p3 = new ListNode(3)

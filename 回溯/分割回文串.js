@@ -34,5 +34,6 @@ var partition = function (s) {
   backtrace(0)
   return arr
 };
+
 let s = partition("aabbaa")
 console.log(s);

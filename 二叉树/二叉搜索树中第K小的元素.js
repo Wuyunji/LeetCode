@@ -19,17 +19,16 @@ function TreeNode(val, left, right) {
  */
 var kthSmallest = function (root, k) {
   let arr = []
-  function visit(root) {
-    arr.push(root.val)
-  }
   function trace(root) {
     if (root === null) return
     trace(root.left)
-    visit(root)
+    arr.push(root.val)
     trace(root.right)
   }
   trace(root)
   return arr[k - 1]
+
+  // 非递归
   // let stack = []
   // let t = root
   // while (t !== null || stack.length) {
@@ -44,9 +43,15 @@ var kthSmallest = function (root, k) {
   // return null
 };
 
-let t1 = new TreeNode(3)
+let t1 = new TreeNode(1)
+let t2 = new TreeNode(2)
+let t3 = new TreeNode(3)
+let t4 = new TreeNode(4)
 
-let root = t1
+t3.left = t1
+t3.right = t4
+t1.right = t2
+let root = t3
 
-let s = kthSmallest(root, 1)
+let s = kthSmallest(root, 2)
 console.log(s);

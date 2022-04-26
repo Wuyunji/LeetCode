@@ -17,5 +17,6 @@ var coinChange = function (coins, amount) {
   console.log(dp);
   return dp[amount] > amount ? -1 : dp[amount]
 };
+
 let s = coinChange([1, 2, 5], 11)
 console.log(s);

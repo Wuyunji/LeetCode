@@ -1,8 +1,8 @@
-// getParams
+// getParams 解析URL parseURL
 function getParams(url) {
+  url = decodeURIComponent(url)
   let obj = {}
-  let str = decodeURIComponent(url)
-  let s1 = str.split(/\?|\#/)
+  let s1 = url.split(/\?|\#/)
   let s2 = s1[1].split('&')
   for (let s of s2) {
     let key = s.split('=')[0]

@@ -58,5 +58,6 @@ var spiralOrder = function (matrix) {
   }
   return arr
 };
+
 let s = spiralOrder([[1]])
 console.log(s);

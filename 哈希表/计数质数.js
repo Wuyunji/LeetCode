@@ -15,5 +15,6 @@ var countPrimes = function (n) {
   }
   return primeArr.length
 };
+
 let s = countPrimes(10)
 console.log(s);

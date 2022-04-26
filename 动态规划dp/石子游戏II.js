@@ -23,5 +23,6 @@ var stoneGameII = function (piles) {
   console.log(dp);
   return dp[0][1]
 };
+
 let s = stoneGameII([5, 3, 4, 5, 6])
 console.log(s);

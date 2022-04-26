@@ -16,6 +16,7 @@ Array.prototype.getReader = function () {
     }
   }
 }
+
 let arr = [1, 2, 3, 4, 5]
 let reader = arr.getReader()
 console.log(reader.read('1'));

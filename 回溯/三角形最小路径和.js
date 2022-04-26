@@ -26,5 +26,6 @@ var minimumTotal = function (triangle) {
   // backtrace(0, 0, 0)
   // return min
 };
+
 let s = minimumTotal([[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]])
 console.log(s);

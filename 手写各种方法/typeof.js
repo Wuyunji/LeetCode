@@ -2,6 +2,7 @@
 function Typeof(x) {
   return x === null ? 'object' : Object.prototype.toString.call(x).slice(8, -1).toLowerCase()
 }
+
 console.log(Typeof(123));
 console.log(Typeof(true));
 console.log(Typeof('123'));

@@ -16,6 +16,7 @@ var validateStackSequences = function (pushed, popped) {
   }
   return true
 };
+
 let s = validateStackSequences([1, 2, 3, 4, 5], [4, 5, 3, 2, 1])
 console.log(s);
 

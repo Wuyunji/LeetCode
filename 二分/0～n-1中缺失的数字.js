@@ -16,5 +16,6 @@ var missingNumber = function (nums) {
   }
   return i
 };
+
 let s = missingNumber([1])
 console.log(s);

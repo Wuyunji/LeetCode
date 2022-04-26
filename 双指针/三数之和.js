@@ -30,6 +30,7 @@ var threeSum = function (nums) {
   }
   return arr
 };
+
 let s = threeSum([-1, 0, 1, 2, -1, -4])
 console.log(s);
 

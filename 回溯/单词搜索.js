@@ -33,6 +33,7 @@ var exist = function (board, word) {
   }
   return false
 };
+
 let s = exist([
   ["A", "B", "C", "E"],
   ["S", "F", "C", "S"],

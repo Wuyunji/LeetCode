@@ -18,5 +18,6 @@ var lengthOfLIS = function (nums) {
   }
   return Math.max(...dp)
 };
+
 let s = lengthOfLIS([4, 10, 4, 3, 8, 9])
 console.log(s);

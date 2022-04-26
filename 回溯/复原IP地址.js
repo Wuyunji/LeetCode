@@ -36,5 +36,6 @@ var restoreIpAddresses = function (s) {
   backtrace(0)
   return arr
 };
+
 let s = restoreIpAddresses("010010")
 console.log(s);

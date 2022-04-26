@@ -22,5 +22,6 @@ var intervalIntersection = function(firstList, secondList) {
   }
   return arr
 };
+
 let s = intervalIntersection([[0,2],[5,10],[13,23],[24,25]], [[1,5],[8,12],[15,24],[25,26]])
 console.log(s);

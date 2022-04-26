@@ -18,5 +18,6 @@ var minArray = function (numbers) {
   }
   return numbers[i]
 };
+
 let s = minArray([1, 2])
 console.log(s);

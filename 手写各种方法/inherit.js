@@ -14,6 +14,7 @@ function Son() {
   Father.call(this)
   this.play = 'game'
 }
+
 inherit(Son, Father)
 let s = new Son()
 console.log(s);

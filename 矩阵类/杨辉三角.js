@@ -18,6 +18,7 @@ var generate = function (numRows) {
   }
   return arr
 };
+
 let s = generate(3)
 console.log(s);
 

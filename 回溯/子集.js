@@ -17,5 +17,6 @@ var subsets = function(nums) {
   backtrack(0)
   return arr
 };
+
 let s = subsets([1,2,3,4,5])
 console.log(s);

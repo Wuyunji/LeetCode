@@ -14,5 +14,6 @@ var isPalindrome = function (s) {
   let str = s.replace(/[^0-9a-zA-Z]/g, '').toLowerCase()
   return str === str.split('').reverse().join('')
 };
+
 let s = isPalindrome("A man, a plan, a canal: Panama")
 console.log(s);

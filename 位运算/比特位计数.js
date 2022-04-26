@@ -10,5 +10,6 @@ var countBits = function (n) {
   }
   return arr
 };
+
 let s = countBits(18)
 console.log(s);

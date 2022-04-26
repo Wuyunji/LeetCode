@@ -23,5 +23,6 @@ var generateParenthesis = function (n) {
   backtrace(n, n)
   return arr
 };
+
 let s = generateParenthesis(3)
 console.log(s);

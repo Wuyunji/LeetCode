@@ -19,4 +19,6 @@ var climbStairs = function (n) {
   }
   return f
 };
-console.log(climbStairs(10));
+
+let s = climbStairs(10)
+console.log(s);

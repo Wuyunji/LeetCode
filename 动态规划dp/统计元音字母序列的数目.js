@@ -17,5 +17,6 @@ var countVowelPermutation = function (n) {
   }
   return countArr.reduce((sum, n) => (sum + n) % MOD)
 };
+
 let s = countVowelPermutation(2)
 console.log(s);

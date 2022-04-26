@@ -30,5 +30,6 @@ var search = function (nums, target) {
   }
   return false
 };
+
 let s = search([2, 5, 6, 0, 0, 1, 2], 1)
 console.log(s);

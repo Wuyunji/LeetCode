@@ -31,6 +31,7 @@ var detectCycle = function(head) {
   }
   return null
 };
+
 let p1 = new ListNode(3)
 let p2 = new ListNode(2)
 let p3 = new ListNode(0)

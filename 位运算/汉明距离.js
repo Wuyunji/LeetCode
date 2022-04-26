@@ -13,5 +13,6 @@ var hammingDistance = function (x, y) {
   }
   return count
 };
+
 let s = hammingDistance(1, 8)
 console.log(s);

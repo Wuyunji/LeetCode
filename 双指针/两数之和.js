@@ -20,6 +20,7 @@ var twoSum = function (nums, target) {
     map.set(nums[i], i)
   }
 };
+
 let s = twoSum([4, 6, 2, 7, 11, 15, 1], 9)
 console.log(s);
 

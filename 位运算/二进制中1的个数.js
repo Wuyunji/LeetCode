@@ -11,8 +11,10 @@ var hammingWeight = function(n) {
   }
   return sum
 };
+
 let s = hammingWeight(128)
 console.log(s);
+
 // n & (n-1)
 // 110100
 // 110011

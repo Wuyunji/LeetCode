@@ -25,5 +25,6 @@ var decodeString = function (s) {//3[a2[c]] --> accaccacc
   }
   return str
 };
+
 let s = decodeString("10[a]")
 console.log(s);

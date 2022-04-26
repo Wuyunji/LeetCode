@@ -41,5 +41,4 @@ function LazyMan(message) {
   return new MyLazyMan(message)
 }
 
-
 LazyMan('LazyMan').eat('banana').sleep(2).eat('apple').sleepFirst(4).eat('banana')

@@ -1,4 +1,5 @@
 // jsonp
+// Promise版
 function jsonp1(url, data, callbackName) {
   return new Promise((resolve, reject) => {
     // 参数处理
@@ -18,7 +19,7 @@ function jsonp1(url, data, callbackName) {
     }
   })
 }
-
+// callback版
 function jsonp2(url, data, callbackName, callback) {
   // 参数处理
   let params = ''

@@ -20,5 +20,6 @@ var longestPalindrome = function (s) {
   }
   return res
 };
+
 let s = longestPalindrome('cbbd')
 console.log(s);

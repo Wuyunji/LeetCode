@@ -18,5 +18,6 @@ var stoneGame = function (piles) {
   console.log(dp);
   return dp[0][n - 1] > 0
 };
+
 let s = stoneGame([5, 3, 4, 5, 6])
 console.log(s);

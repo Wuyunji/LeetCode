@@ -35,6 +35,7 @@ var rightSideView = function (root) {
 
   return arr
 };
+
 let t1 = new TreeNode(1)
 let t2 = new TreeNode(2)
 let t3 = new TreeNode(3)

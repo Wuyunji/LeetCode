@@ -11,5 +11,6 @@ var majorityElement = function (nums) {
   }
   return maj
 };
+
 let s = majorityElement([3,3,4,4,3,3,3,4,4,5,6,7,7,2,1])//443636766666
 console.log(s);

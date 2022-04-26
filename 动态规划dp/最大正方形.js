@@ -20,5 +20,6 @@ var maximalSquare = function (matrix) {
   }
   return Math.max(...dp.flat(Infinity)) ** 2
 };
+
 let s = maximalSquare([["1", "0", "1", "0", "0"], ["1", "0", "1", "1", "1"], ["1", "1", "1", "1", "1"], ["1", "0", "0", "1", "0"]])
 console.log(s);

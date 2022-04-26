@@ -11,5 +11,6 @@ var cuttingRope = function (n) {
   if (b === 1) return 3 ** (a - 1) * 2 * 2
   if (b === 2) return 3 ** a * 2
 };
+
 let s = cuttingRope(10)
 console.log(s);

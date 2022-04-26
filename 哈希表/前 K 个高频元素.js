@@ -27,5 +27,6 @@ var topKFrequent = function (nums, k) {
   }
   return arr
 };
+
 let s = topKFrequent([1,1,1,2,2,3], 2)
 console.log(s);

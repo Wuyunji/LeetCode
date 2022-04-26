@@ -10,6 +10,7 @@ var findRepeatNumber = function (nums) {
     set.add(n)
   }
 };
+
 let s = findRepeatNumber([2, 3, 1, 0, 2, 5, 3])
 console.log(s);
 

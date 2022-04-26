@@ -20,5 +20,6 @@ var search = function (nums, target) {
   }
   return binarySearch(target) - binarySearch(target - 1)
 };
+
 let s = search([5, 7, 7, 8, 8, 10], 8)
 console.log(s);

@@ -12,6 +12,7 @@ var getSum = function (a, b) {
   }
   return a
 };
+
 let s = getSum(1, 3)
 console.log(s);
 

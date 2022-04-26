@@ -17,5 +17,6 @@ var mySqrt = function (x) {
     }
   }
 };
+
 let s = mySqrt(900719925)
 console.log(s);

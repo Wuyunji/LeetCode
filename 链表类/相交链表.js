@@ -29,15 +29,12 @@ var getIntersectionNode = function (headA, headB) {
 let p1 = new ListNode(1)
 let p2 = new ListNode(2)
 let p3 = new ListNode(3)
-
 let p4 = new ListNode(4)
 let p5 = new ListNode(5)
 let p6 = new ListNode(6)
 
 let p7 = new ListNode(2)
 let p8 = new ListNode(3)
-
-
 
 let head1 = p1
 p1.next = p2

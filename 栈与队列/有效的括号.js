@@ -21,6 +21,7 @@ var isValid = function (s) {
   }
   return stack.length === 0
 };
+
 let s = isValid("()[]")
 console.log(s);
 

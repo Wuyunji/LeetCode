@@ -16,5 +16,6 @@ var dailyTemperatures = function (temperatures) {
   }
   return arr
 }
+
 let s = dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])
 console.log(s);

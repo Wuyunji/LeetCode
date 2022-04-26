@@ -56,6 +56,7 @@ var setZeroes = function (matrix) {
     }
   }
 };
+
 let matrix = [[0, 1]]
 setZeroes(matrix)
 console.log(matrix);

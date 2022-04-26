@@ -15,5 +15,6 @@ var containsNearbyDuplicate = function (nums, k) {
   }
   return false
 };
+
 let s = containsNearbyDuplicate([1, 2, 3, 1], 3)
 console.log(s);

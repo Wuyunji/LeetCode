@@ -25,5 +25,6 @@ var permutation = function (s) {
   backtrace(0)
   return [...set]
 };
+
 let s = permutation("aab")
 console.log(s);

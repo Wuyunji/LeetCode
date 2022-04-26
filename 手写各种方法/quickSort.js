@@ -18,6 +18,7 @@ function quickSort(arr) {
   sort(0, arr.length - 1)
   return arr
 }
+
 let arr = [5, 3, 7, 9, 8, 1, 2, 0, 6, 4]
 quickSort(arr)
 console.log(arr);

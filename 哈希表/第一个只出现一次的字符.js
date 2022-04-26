@@ -13,6 +13,7 @@ var firstUniqChar = function (s) {
   }
   return ' '
 };
+
 let s = firstUniqChar("abaccdeff")
 console.log(s);
 

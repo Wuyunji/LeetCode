@@ -26,6 +26,7 @@ var numEnclaves = function (grid) {
 
   return grid.reduce((sum, arr) => sum + arr.reduce((sum, s) => sum + s, 0), 0)
 };
+
 let s = numEnclaves([
   [0, 0, 0, 0],
   [1, 0, 1, 0],

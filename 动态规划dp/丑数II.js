@@ -27,5 +27,6 @@ var nthUglyNumber = function (n) {
   // }
   // return dp.lastIndexOf(true)
 }
+
 let s = nthUglyNumber(342)
 console.log(s);

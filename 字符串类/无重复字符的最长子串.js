@@ -17,5 +17,6 @@ var lengthOfLongestSubstring = function (s) {
   }
   return max
 };
+
 let s = lengthOfLongestSubstring("aab")
 console.log(s);

@@ -17,5 +17,6 @@ var canCompleteCircuit = function (gas, cost) {
   }
   return sum < 0 ? -1 : (minIndex + 1) % gas.length
 };
+
 let s = canCompleteCircuit([1, 2, 3, 4, 5], [3, 4, 5, 1, 2])
 console.log(s);

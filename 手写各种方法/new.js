@@ -9,5 +9,6 @@ function Person(name, age) {
   this.name = name
   this.age = age
 }
+
 let p = New(Person, 'wyj', 18)
 console.log(p);

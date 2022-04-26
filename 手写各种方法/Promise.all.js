@@ -6,7 +6,7 @@ Promise.All = function (promises) {
     promises.forEach((p, index) => {
       Promise.resolve(p).then(value => {
         arr[index] = value
-        if (++count === arr.length) {
+        if (++count === promises.length) {
           resolve(arr)
         }
       }, reason => {

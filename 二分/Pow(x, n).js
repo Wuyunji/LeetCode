@@ -17,5 +17,6 @@ var myPow = function (x, n) {
   }
   return n > 0 ? s : 1 / s
 };
+
 let s = myPow(3, 0)
 console.log(s);

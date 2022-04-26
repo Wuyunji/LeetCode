@@ -44,6 +44,7 @@ var copyRandomList = function (head) {
 
   return temp.next
 };
+
 let p1 = new Node(1)
 let p2 = new Node(2)
 let p3 = new Node(3)

@@ -16,8 +16,9 @@ var maxProfit = function (k, prices) {
       sell[j] = Math.max(sell[j], buy[j - 1] + prices[i])
     }
   }
-  console.log(sell);
+  // console.log(sell);
   return Math.max(...sell)
 };
+
 let s = maxProfit(3, [3, 3, 5, 0, 0, 3, 1, 4])
 console.log(s);

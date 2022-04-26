@@ -19,5 +19,6 @@ var minSubArrayLen = function (target, nums) {
   }
   return min === Number.MAX_SAFE_INTEGER ? 0 : min;
 };
+
 let s = minSubArrayLen(7, [1, 2, 1, 3, 2, 5, 2])
 console.log(s);
