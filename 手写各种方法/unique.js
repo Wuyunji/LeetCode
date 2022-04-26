@@ -1,4 +1,4 @@
-// 去重
+// 去重 unique
 Array.prototype.Unique = function () {
   let arr = []
   let map = new Map()

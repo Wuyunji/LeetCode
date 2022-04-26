@@ -1,3 +1,4 @@
+// flat
 // 扁平化1
 function flat(arr, depth = 1) {
   if (depth <= 0) return arr

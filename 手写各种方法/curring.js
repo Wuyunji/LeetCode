@@ -1,4 +1,4 @@
-// 柯里化
+// curring 柯里化
 function Curring(fn, ...args1) {
   let args = [...args1]
   let context = this

@@ -1,4 +1,4 @@
-// 节流
+// trottle 节流
 function Trottle(fn, delay) {
   let timer = null
   return function (...args) {
