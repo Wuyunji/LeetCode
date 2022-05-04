@@ -1,4 +1,4 @@
-// lazyman
+// lazyman 调度
 class MyLazyMan {
   constructor(name) {
     console.log(name);

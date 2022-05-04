@@ -1,8 +1,8 @@
 // new
 function New(constructor, ...args) {
-  let _this = Object.create(constructor.prototype)
-  let x = constructor.apply(_this, args)
-  return typeof x === 'object' ? x : _this
+  let obj = Object.create(constructor.prototype)
+  let ans = constructor.apply(obj, args)
+  return (ans !== null && typeof ans === 'object') ? ans : obj
 }
 
 function Person(name, age) {

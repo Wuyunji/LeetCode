@@ -15,5 +15,5 @@ var longestCommonPrefix = function (strs) {
   return str
 };
 
-let s = longestCommonPrefix(['aaa', 'aa', 'aaa'])
+let s = longestCommonPrefix(["flower", "flow", "flight"])
 console.log(s);

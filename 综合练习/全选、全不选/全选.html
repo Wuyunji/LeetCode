@@ -1,0 +1,43 @@
+<!-- 全选、全不选、反选 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全选、全不选</title>
+</head>
+
+<body>
+  <form action="#">
+    全选<input type="checkbox">
+    苹果<input type="checkbox" name="fruit">
+    香蕉<input type="checkbox" name="fruit">
+    梨子<input type="checkbox" name="fruit">
+  </form>
+  <script>
+    let btn = document.getElementsByTagName('input')[0]
+    let input = document.getElementsByName('fruit')
+    btn.onclick = function () {
+      for (let i = 0; i < input.length; i++) {
+        input[i].checked = btn.checked
+      }
+    }
+    for (let i = 0; i < input.length; i++) {
+      input[i].onclick = function () {
+        let count = 0
+        for(let i = 0; i < input.length; i++){
+          count += input[i].checked === true ? 1 : 0
+        }
+        if(count === input.length){
+          btn.checked = true
+        }else{
+          btn.checked = false
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

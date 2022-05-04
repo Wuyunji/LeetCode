@@ -1,0 +1,82 @@
+<!-- 轮播图 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轮播图</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      width: 300px;
+      height: 150px;
+    }
+
+    .slide-box {
+      width: 320px;
+      height: 150px;
+      border: black solid 1px;
+      background-color: yellow;
+      position: relative;
+      overflow: hidden;
+      /* 隐藏溢出的li*/
+    }
+
+    .slide-wrapper {
+      height: 150px;
+      width: 1280px;
+      /* width = (图片宽度 + li的margin) x 图片数量 */
+      position: absolute;
+    }
+
+    .slide-inner {
+      float: left;
+      margin: 0 10px;
+    }
+  </style>
+  <div class="slide-box">
+    <ul class="slide-wrapper" style="left: 0;">
+      <li class="slide-inner"><img src="./1.jpg" alt="图片"></li>
+      <li class="slide-inner"><img src="./2.jpg" alt="图片"></li>
+      <li class="slide-inner"><img src="./3.jpg" alt="图片"></li>
+      <li class="slide-inner"><img src="./1.jpg" alt="图片"></li>
+    </ul>
+  </div>
+  <script>
+    (function slide() {
+      let ul = document.getElementsByClassName('slide-wrapper')[0]
+      let width = 320 //图片宽度
+      let count = 4 //图片数量
+      let current = 1 //当前图片下标 从0开始
+      setInterval(move, 2000)
+
+      function move() {
+        let timer = setInterval(() => {
+          ul.style.left = parseInt(ul.style.left) - 10 + "px";
+          if (parseInt(ul.style.left) <= -current * width) {
+            if (++current === count) {
+              current = 1
+              ul.style.left = 0
+            }
+            clearInterval(timer)
+          }
+        }, 16.7)
+      }
+    }())
+  </script>
+</body>
+
+</html>

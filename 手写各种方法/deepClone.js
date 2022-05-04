@@ -1,4 +1,4 @@
-// DeepColne 深克隆
+// DeepColne 深克隆 深拷贝
 // 深拷贝1 (面试高分版)
 function DeepClone(obj, hash = new WeakMap()) {
   if (obj === null || obj === undefined) return obj
