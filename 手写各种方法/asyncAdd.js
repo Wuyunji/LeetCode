@@ -5,7 +5,7 @@ const addRemote = async (a, b) => new Promise(resolve => {
   setTimeout(() => resolve(a + b), 1000)
 });
 
-// 版本1
+// 版本1 基础版
 async function add(...args) {
   if (args.length === 1) return args[0]
   let a = args.pop()
@@ -15,7 +15,7 @@ async function add(...args) {
   return add(...args)
 }
 
-// 版本2
+// 版本2 reduce高级版
 // async function add(...args) {
 //   return args.reduce((p, cur) => {
 //     return p.then(res => {
@@ -24,7 +24,7 @@ async function add(...args) {
 //   }, Promise.resolve(0))
 // }
 
-// 版本3
+// 版本3 效率最高
 // async function add(...args) {
 //   if (args.length <= 1) return Promise.resolve(args[0])
 //   const promiseList = []

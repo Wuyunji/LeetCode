@@ -1,12 +1,13 @@
 // getValueByPath 属性字符串
 function getValueByPath(obj, path) {
   let paths = path.split('.')
-  let res = obj
+  let ans = obj
   let prop
   while (prop = paths.shift()) {
-    res = res[prop]
+    ans = ans[prop]
+    if (!ans) return undefined
   }
-  return res
+  return ans
 }
 
 let o = {
@@ -26,6 +27,7 @@ let o = {
   j: '与 a 同级'
 };
 
+console.log('a.b.c.d.e', getValueByPath(o, 'a.b.c.d.e.f.g'));
 console.log('a.b.c.d.e', getValueByPath(o, 'a.b.c.d.e'));
 console.log('a.b.c', getValueByPath(o, 'a.b.c'));
 console.log('a.i', getValueByPath(o, 'a.i'));
