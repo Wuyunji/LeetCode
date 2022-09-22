@@ -18,3 +18,6 @@ var wordBreak = function (s, wordDict) {
   }
   return dp[n];
 };
+
+let s = wordBreak("applepenapple", ["apple", "pen"]);
+console.log(s);
