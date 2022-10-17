@@ -4,19 +4,21 @@
  * @return {number}
  */
 var mySqrt = function (x) {
-  if (x === 0) return 0
-  let left = 1
-  let right = x
+  if (x < 2) return x;
+  let left = 1;
+  let right = x >> 1;
   while (left <= right) {
-    let mid = left + ((right - left) >> 1)
-    if (mid * mid <= x) {
-      if ((mid + 1) * (mid + 1) > x) return mid
-      left = mid + 1
+    let mid = left + ((right - left) >> 1);
+    if (mid * mid > x) {
+      right = mid - 1;
+    } else if (mid * mid < x) {
+      left = mid + 1;
     } else {
-      right = mid - 1
+      return mid;
     }
   }
+  return right;
 };
 
-let s = mySqrt(900719925)
+let s = mySqrt(900719925);
 console.log(s);
