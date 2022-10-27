@@ -16,62 +16,24 @@ function ListNode(val, next) {
  * @param {number} right
  * @return {ListNode}
  */
-var reverseBetween = function (head, left, right) {//有bug
-  let node = new ListNode(0, head)
+var reverseBetween = function (head, left, right) {
+  let root = new ListNode(0)
+  root.next = head
 
-  let A = node
-  for (let i = 0; i < left - 1; i++) {
-    A = A.next
+  let pre = root
+  for (let i = 1; i < left; i++) {
+    pre = pre.next
   }
 
-  let rightNode = A
-  for (let i = 0; i < right - left + 1; i++) {
-    rightNode = rightNode.next
+  let cur = pre.next
+  for (let i = 0; i < right - left; i++) {
+    let nex = cur.next
+    cur.next = nex.next
+    nex.next = pre.next
+    pre.next = nex
   }
 
-  let leftNode = A.next
-  let B = rightNode.next
-
-  A.next = null
-  rightNode.next = null
-
-  reverseList(leftNode)
-
-  A.next = rightNode
-  leftNode.next = B
-
-  function reverseList(head) {
-    let pre = null
-    let cur = head
-    let nex = null
-    while (cur) {
-      nex = cur.next
-      cur.next = pre
-      pre = cur
-      cur = nex
-    }
-    return pre
-  }
-
-  return head
-
-  // let root = new ListNode(0)
-  // root.next = head
-
-  // let pre = root
-  // for (let i = 1; i < left; i++) {
-  //   pre = pre.next
-  // }
-
-  // let cur = pre.next
-  // for (let i = 0; i < right - left; i++) {
-  //   let nex = cur.next
-  //   cur.next = nex.next
-  //   nex.next = pre.next
-  //   pre.next = nex
-  // }
-
-  // return root.next
+  return root.next
 };
 
 let p1 = new ListNode(1)
@@ -88,5 +50,5 @@ p3.next = p4
 p4.next = p5
 p5.next = p6
 p6.next = null
-let s = reverseBetween(head)
+let s = reverseBetween(head, 2,4)
 console.log(s);
