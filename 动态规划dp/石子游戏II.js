@@ -7,7 +7,6 @@ var stoneGameII = function (piles) {
   let n = piles.length
   let dp = new Array(n).fill(0).map(() => new Array(n+1).fill(-1))
   let sum = 0
-
   for (let i = n - 1; i >= 0; i--) {
     sum += piles[i]
     for (let M = 1; M <= n; M++) {
@@ -20,7 +19,7 @@ var stoneGameII = function (piles) {
       }
     }
   }
-  console.log(dp);
+  // console.log(dp);
   return dp[0][1]
 };
 

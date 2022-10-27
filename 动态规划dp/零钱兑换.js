@@ -14,7 +14,7 @@ var coinChange = function (coins, amount) {
       }
     }
   }
-  console.log(dp);
+  // console.log(dp);
   return dp[amount] > amount ? -1 : dp[amount]
 };
 

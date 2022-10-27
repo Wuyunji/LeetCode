@@ -1,5 +1,5 @@
-// reduce的使用
-function reduceDivideArr(arr) {
+// getDivideArr reduce的使用
+function getDivideArr(arr) {
   let ans = []
   let lastIndex = 0
   arr.reduce((pre, cur, index, arr) => {
@@ -24,5 +24,5 @@ function reduceDivideArr(arr) {
 }
 
 let arr = [1, 2, 3, 6, 8, 9, 11] //  -->  [ '1-3', '6', '8-9', '11' ]
-let s = reduceDivideArr(arr)
+let s = getDivideArr(arr)
 console.log(s);

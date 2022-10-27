@@ -15,7 +15,7 @@ var stoneGame = function (piles) {
       }
     }
   }
-  console.log(dp);
+  // console.log(dp);
   return dp[0][n - 1] > 0
 };
 
