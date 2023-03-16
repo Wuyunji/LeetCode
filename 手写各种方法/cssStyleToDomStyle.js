@@ -22,6 +22,6 @@ function cssStyleToDomStyle2(str) {
 }
 
 let s1 = cssStyleToDomStyle1('-webkit-box-orient') // -->  webkitBoxOrient
-let s2 = cssStyleToDomStyle1('-webkit-box-orient') // -->  webkitBoxOrient
+let s2 = cssStyleToDomStyle1('line-height') // -->  lineHeight
 console.log(s1);
 console.log(s2);
